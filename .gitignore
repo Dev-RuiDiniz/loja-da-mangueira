@@ -1,0 +1,5 @@
+.agents/
+.impeccable/
+.codex/
+node_modules/
+*.log
