@@ -14,8 +14,6 @@
   const heroScene = document.querySelector("[data-hero-scene]");
   const heroSlideshow = document.querySelector("[data-hero-slideshow]");
   const heroSlides = Array.from(document.querySelectorAll("[data-hero-slide]"));
-  const portfolioSlideshow = document.querySelector("[data-portfolio-slideshow]");
-  const portfolioSlides = Array.from(document.querySelectorAll("[data-portfolio-slide]"));
   const scrollScenes = Array.from(document.querySelectorAll("[data-scroll-scene]"));
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const HERO_SLIDE_DURATION = 5000;
@@ -78,68 +76,6 @@
         stopHeroSlideshow();
       } else {
         startHeroSlideshow();
-      }
-    });
-  }
-
-  let portfolioSlideIndex = Math.max(0, portfolioSlides.findIndex(function (slide) {
-    return slide.classList.contains("is-active");
-  }));
-  let portfolioSlideshowTimer = 0;
-  let portfolioSlideshowInView = true;
-
-  function showPortfolioSlide(index) {
-    if (!portfolioSlides.length) {
-      return;
-    }
-
-    portfolioSlideIndex = (index + portfolioSlides.length) % portfolioSlides.length;
-    portfolioSlides.forEach(function (slide, slideIndex) {
-      slide.classList.toggle("is-active", slideIndex === portfolioSlideIndex);
-    });
-  }
-
-  function stopPortfolioSlideshow() {
-    if (portfolioSlideshowTimer) {
-      window.clearInterval(portfolioSlideshowTimer);
-      portfolioSlideshowTimer = 0;
-    }
-  }
-
-  function startPortfolioSlideshow() {
-    if (reducedMotion || portfolioSlides.length < 2 || !portfolioSlideshowInView || document.hidden || portfolioSlideshowTimer) {
-      return;
-    }
-
-    portfolioSlideshowTimer = window.setInterval(function () {
-      showPortfolioSlide(portfolioSlideIndex + 1);
-    }, HERO_SLIDE_DURATION);
-  }
-
-  if (portfolioSlideshow && portfolioSlides.length > 1 && !reducedMotion) {
-    if ("IntersectionObserver" in window) {
-      portfolioSlideshowInView = false;
-      const portfolioSlideshowObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          portfolioSlideshowInView = entry.isIntersecting;
-          if (portfolioSlideshowInView) {
-            startPortfolioSlideshow();
-          } else {
-            stopPortfolioSlideshow();
-          }
-        });
-      }, { threshold: 0.08 });
-
-      portfolioSlideshowObserver.observe(portfolioSlideshow);
-    } else {
-      startPortfolioSlideshow();
-    }
-
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) {
-        stopPortfolioSlideshow();
-      } else {
-        startPortfolioSlideshow();
       }
     });
   }
