@@ -8,50 +8,65 @@ web
 
 ## Stack
 
-static HTML/CSS/JS, with future publication on Hostinger
+Static HTML, CSS and JavaScript. No build step, backend or WordPress dependency. Future publication planned for Hostinger.
+
+## Current status
+
+Landing page estática implementada e publicada no repositório GitHub. O projeto está em fase de validação de conteúdo comercial e confirmação dos dados de atendimento antes da publicação definitiva na Hostinger.
 
 ## Users
 
-Público amplo: qualquer pessoa ou equipe que precise escolher mangueiras e conexões para uma aplicação, manutenção ou operação profissional.
+Público amplo: pessoas, equipes de manutenção e operações profissionais que precisam escolher mangueiras, conexões ou componentes para uma aplicação específica.
 
 ## Product Purpose
 
-A Loja da Mangueira ajuda visitantes a encontrar e escolher mangueiras e conexões adequadas para sua necessidade, orientando o próximo contato comercial e técnico.
+A Loja da Mangueira ajuda o visitante a entender qual linha pode atender sua aplicação e conduz a conversa comercial para o envio de uma foto, especificação ou necessidade de reposição.
 
-## Positioning
+## Commercial Positioning
 
-O foco da Loja da Mangueira é a escolha de mangueiras e conexões. A experiência deve tornar essa escolha mais clara para quem chega com uma aplicação, uma necessidade de reposição ou uma dúvida técnica.
+O diferencial central é a escolha de mangueiras e conexões com orientação clara. A landing apresenta o portfólio por tipo de solução e contexto de uso, reduzindo a distância entre a dúvida técnica e o contato com a equipe.
 
-## Operating Context
+## Current experience
 
-Os visitantes chegam ao site para conhecer linhas de produtos, relacioná-las a ambientes de trabalho e entrar em contato com a equipe para enviar uma especificação, foto ou necessidade de atendimento.
+- Hero com a mensagem “Mangueiras para manter sua operação em movimento”, dois CTAs e slideshow de quatro fotos da loja, com troca a cada 5 segundos.
+- Bloco de diferenciais com orientação especializada, pronta entrega, componentes confiáveis e orçamento simples.
+- Mosaico editorial com cinco fotos novas de mangueiras hidráulicas, multipropósito e industriais, em cards de tamanhos variados.
+- Destaques técnicos com dois cards: seleção hidráulica e robustez para aplicações industriais. Os textos estão centralizados para leitura mais direta.
+- Aplicações por ambiente: indústria, agronegócio, construção, transporte, mineração e manutenção.
+- Seção institucional com foto interna da loja, atendimento local, foco profissional e orientação direta.
+- CTA de contato para envio de foto ou especificação da aplicação.
+- Rodapé com navegação, categorias e canais de atendimento.
 
 ## Capabilities and Constraints
 
-- A primeira versão é uma landing page estática, sem WordPress e sem backend de formulário.
-- A navegação deve funcionar por âncoras, com menu mobile e contatos clicáveis.
-- A publicação futura será feita na Hostinger.
-- Dados de contato e localização atualmente presentes no site são provisórios e devem permanecer identificados até confirmação.
-- Não inventar certificações, números técnicos, depoimentos, clientes ou garantias.
-- A interface deve manter bom contraste, foco visível, navegação por teclado, responsividade e suporte a `prefers-reduced-motion`.
+- Navegação por âncoras, menu mobile funcional e indicador de seção ativa.
+- Links clicáveis para WhatsApp, telefone, e-mail e Google Maps.
+- Animações discretas de entrada com `IntersectionObserver`, respeitando `prefers-reduced-motion`.
+- Lente translúcida e localizada no hero para melhorar a leitura sem criar uma camada opaca sobre as fotos.
+- Sem formulário com backend nesta versão.
+- Sem vídeo ativo na interface atual; a experiência usa fotografias locais.
+- Não inventar certificações, depoimentos, clientes, garantias ou especificações além do conteúdo confirmado.
+- Dados de contato e localização permanecem provisórios até confirmação comercial.
 
 ## Brand Commitments
 
 - Nome: Loja da Mangueira.
-- Comunicação técnica, clara e profissional.
-- A referência visual ORYZO serve apenas como direção de princípios visuais; não usar nome, logo, imagens ou textos da referência.
+- Comunicação técnica, clara, premium e orientada à decisão.
+- Diferencial comunicado: escolha de mangueiras e conexões.
+- A referência ORYZO/Stanzza orienta princípios de ritmo, composição e contraste, sem reutilizar marca, logo, textos ou imagens.
 
 ## Evidence on Hand
 
-- Copy e estrutura atuais em `index.html`.
-- Sistema visual e comportamento em `styles.css` e `script.js`.
-- Imagens editoriais locais na pasta `assets/`.
-- Loop técnico local em `assets/industrial-loop.mp4`.
-- Não há backend, catálogo conectado, certificações confirmadas ou dados comerciais definitivos no projeto.
+- Conteúdo e estrutura em [`index.html`](./index.html).
+- Sistema visual em [`styles.css`](./styles.css).
+- Interações em [`script.js`](./script.js).
+- Assets editoriais locais em [`assets/`](./assets/).
+- Não há catálogo conectado, carrinho, checkout, CMS, backend ou dados comerciais definitivos.
 
 ## Product Principles
 
-- Tornar a escolha de mangueiras e conexões mais clara.
-- Relacionar produtos à aplicação real do visitante.
-- Facilitar o contato com a equipe quando a especificação não estiver definida.
-- Preservar precisão e transparência sobre informações ainda provisórias.
+- Tornar a escolha mais clara antes do orçamento.
+- Relacionar cada linha ao ambiente e à necessidade do visitante.
+- Usar imagem como prova visual, sem substituir a orientação técnica.
+- Facilitar o contato direto com a equipe.
+- Ser transparente sobre informações ainda provisórias.
